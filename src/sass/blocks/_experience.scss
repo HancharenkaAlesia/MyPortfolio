@@ -1,0 +1,85 @@
+.experience {
+    position: relative;
+    &__title{
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);
+        &::before {
+            left: 26%;
+        }
+    }
+    &__subtitle {
+        text-align: center;
+    }
+    &__grid {
+        display: grid;
+        padding-left: 65px;
+        padding-right: 85px;
+        grid-template-columns: repeat(2, 420px);
+        column-gap: 135px;
+    }
+    &__cell {
+        position: relative;
+        margin-bottom: 45px;
+        margin-left: 42px;
+    }
+    &__column {
+        position: relative;
+        .title_fs20px {
+            margin-bottom: 30px;
+            margin-left: 42px;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                border-radius: 100%;
+                background: $main-color;
+                top: 9px;
+                left: -7px;
+            }
+        }
+        &__ul {
+            position: relative;
+            list-style-type: none;
+        }
+        &__header {
+            display: flex;
+            position: relative;
+            align-items: center;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 42px;
+                height: 1px;
+                background-color: #000000;
+                left: -42px;
+                top: 20px;
+            }
+        }
+        &__wrapper {
+            margin-left: 56px;
+        }
+        &__icon {
+            position: absolute;
+            left: 10px;
+            top: 12px;
+            &::before {
+                left: -10px;
+                top: -12px;
+            }
+        }
+        &__descr {
+            margin-top: 12px;
+            &::before {
+                content: '';
+                position: absolute;
+                height: calc(100% + 55px);
+                width: 1px;
+                background-color: #000000;
+                top: -36px;
+                left: -42px;
+            }
+        }
+    }
+}
