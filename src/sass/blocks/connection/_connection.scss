@@ -1,0 +1,100 @@
+.connection {
+    margin-top: 120px;
+    margin-bottom: 70px;
+    &__grid {
+        display: grid;
+        grid-template-columns: 400px 585px;
+        grid-template-rows: 232px 338px;
+        row-gap: 30px;
+        justify-content: space-between;
+    }
+    &__photo {
+        grid-row: 1 / 3;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__contacts {
+        text-align: left;
+        &__title {
+            display: inline-block;
+            left: 0;
+        }
+        &__descr, &__social {
+            margin-bottom: 20px;
+        }
+        &__social {
+            a { 
+                margin-right: 25px;
+                img {
+                    width: 30px;
+                }
+            }
+        }
+    }
+    &__form {
+        display: grid;
+        grid-template-columns: repeat(2, 280px);
+        grid-template-rows: 45px 190px 45px;
+        column-gap: 25px;
+        row-gap: 30px;
+        label {
+            display: block;
+            position: absolute;
+            top: -9px;
+            left: 12px;
+            height: 18px;
+            padding: 0 8px;
+            background-color: #fff;
+            font-size: 12px;
+            margin-bottom: 0;
+        }
+        .btn_yellow {
+            width: 219px;
+            height: 45px;
+            border: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+    }
+    &__input {
+        position: relative;
+        input {
+        width: 280px;
+        height: 45px;
+        font-weight: 500;
+        font-size: 12px;
+        padding: 0 20px;
+        }
+    }
+    &__btn {
+        display: flex;
+        grid-column: 1 / 3;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__policy {
+        display: flex;
+        text-align: center;
+        input {
+            margin-right: 10px;
+        }
+        span {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+    &__textarea {
+        position: relative;
+        grid-column: 1 / 3;
+        textarea {
+            width: 585px;
+            height: 190px;
+            resize: none;
+            font-weight: 500;
+            font-size: 12px;
+            padding: 20px;
+        }
+    }
+}
